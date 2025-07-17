@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Ankita</title>
+
+  <!-- ✅ Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, a, .card-title, .card-text {
+      color: #fff !important;
+    }
+
+    a {
+      color: #00c3ff;
+    }
+
+    a:hover {
+      color: #66d9ff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #00c3ff;
+    }
+
+    .avatar {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #77f5f1;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    }
+
+    .card {
+      background-color: #111 !important;
+      border: 1px solid #333 !important;
+    }
+
+    .btn-custom {
+      background-color: #77f5f1;
+      color: #000 !important;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #5bd8d4;
+      color: #000 !important;
+    }
+
+    .btn-custom:active {
+      background-color: #33bcb8 !important;
+      color: #fff !important;
+    }
+
+    .project-title {
+      color: #77f5f1;
+    }
+
+    .social-icon {
+      width: 50px;
+      height: 50px;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+      background-color: #ff69b4;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 15px rgba(119, 245, 241, 0.5);
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .timeline .row::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #77f5f1;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+
+/* 👇 This class only affects volunteering images */
+  .volunteer-img {
+    height: 230px;
+    object-fit: cover;
+  }
+
+  .project-img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .article-img {
+    height: 350px;
+    object-fit: cover;
+  }
+
+  
+  .overlay-text {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px 25px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px; /* Increased font size */
+  width: 90%;
+  border-radius: 8px;
+  line-height: 1.3;
+}
+
+.image-overlay-container img {
+    height: 350px; /* optional: control height */
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card-img-top.article-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .overlay-text1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    text-align: center;
+  }
+/* Customize active nav-link color */
+  .nav-link.active {
+    color: #77f5f1 !important;
+    font-weight: 600;
+  }
+  
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <!-- ✅ NAVBAR -->
+<!-- ✅ NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-3" style="min-height: 80px;">
+  <div class="container justify-content-center">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      <ul class="navbar-nav text-center" style="font-size: 0.9rem;">
+        <li class="nav-item px-3"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#experience">Work Experience</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#volunteering">Volunteering</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#awards">Awards and Scholarship</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#articles">Articles</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#certificates">Certificates</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // JavaScript to toggle active class on navbar links
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+      // Remove active class from all links
+      document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+      // Add active class to clicked link
+      this.classList.add('active');
+    });
+  });
+</script>
+
+
+
+  <!-- ✅ HERO SECTION -->
+  <section id="home" class="d-flex align-items-center text-white" style="
+    background: url('images/about/a.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 135vh;
+    position: relative;">
+    <div style="
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;"></div>
+
+    <div class="container text-start" style="position: relative; z-index: 1; margin-top: -200px;">
+      <div class="row">
+        <div class="col-md-10 col-lg-8">
+          <h1 class="display-4 fw-bold mb-4">Welcome to my portfolio</h1>
+          <h1 class="mb-3">It's me <span style="color:#77f5f1;">Ankita</span></h1>
+          <h2 class="mb-4">I’m a <span id="typed-text" style="color:#ff69b4;"></span></h2>
+
+          <!-- ✅ Contact (Hero) -->
+          <div class="text-left mb-5" style="margin-top: 200px;">
+            <h2 class="display-5 fw-bold mb-4">Contact Me</h2>
+            <div class="d-flex justify-content-start gap-3 mt-3">
+              <a href="https://www.linkedin.com/in/ankita-shelke-bb515221b/" target="_blank" title="LinkedIn" class="social-icon rounded-circle bg-white shadow d-flex align-items-center justify-content-center">
+                <img src="icons/linkedin.png" alt="LinkedIn" width="38">
+              </a>
+              <a href="https://github.com/Ankita-Codee" target="_blank" title="GitHub" class="social-icon rounded-circle bg-white shadow d-flex align-items-center justify-content-center">
+                <img src="icons/github.png" alt="GitHub" width="34">
+              </a>
+              <a href="https://medium.com/@admane.ankita" target="_blank" title="Medium" class="social-icon rounded-circle bg-white shadow d-flex align-items-center justify-content-center">
+                <img src="icons/m.png" alt="Medium" width="24">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ ABOUT SECTION -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="display-4 fw-bold mb-5 text-center"><span style="color: #77f5f1;">Who I am</span></h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 d-flex justify-content-center mb-4 mb-md-0">
+          <img src="images/about/grad.png" alt="Profile Picture" class="avatar" />
+        </div>
+        <div class="col-md-8">
+          <div class="fs-5" style="line-height: 1.8; text-align: justify;">
+            <p>
+            I’m Ankita, a Data Scientist with a deep love for math, coding, and turning raw data into meaningful intelligence. My curiosity for problem-solving has led me to explore everything from Machine Learning to building LLM-powered Agent Systems.
+          </p>
+
+          <p>
+            I hold a Master's degree in Data Science and received a Poster Presentation Award at the Canadian Statistics Students Conference for my research on Forecasting Canadian Inflation using Machine Learning and Time Series techniques.
+          </p>
+
+          <p>
+            My core skills include Python, SQL, Natural Language Processing (NLP), Machine Learning (ML), Deep Learning (DL), and Generative AI (GenAI). I enjoy designing smart agentic workflows using tools like LangChain, LangGraph, and AutoGen.
+          </p>
+
+          <p>
+            I’m equally passionate about simplifying ideas through writing. I regularly publish technical blogs and tutorials to help others understand AI systems and build confidently. I believe that sharing knowledge is as powerful as creating it. Whether it’s training models, writing RAG pipelines, or breaking down AI concepts, I thrive on building meaningful systems and learning every day.
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ PROJECTS SECTION -->
+  <section id="projects" class="py-5" style="background-color: #1c1c1c; color: white;">
+    <div class="container">
+      <h2 class="display-4 fw-bold mb-5 text-center"><span style="color: #77f5f1;">Projects</span></h2>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Project 1 -->
+<div class="col-md-4">
+  <a href="https://tru.arcabc.ca/node/627" class="text-decoration-none text-dark">
+    <div class="card h-100 border-0 shadow-sm">
+      <img src="images/projects/inflation.jpeg" class="card-img-top rounded-top" alt="Project 1">
+      <div class="card-body">
+        <h4 class="card-title fw-bold project-title mb-3">
+  <span style="color: #77f5f1; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">
+    📈Optimizing Canada’s Inflation: A Novel Approach 📊
+  </span>
+</h4>
+
+        <p class="card-text mb-3">
+          Inflation plays a critical role in maintaining economic stability and directly impacts the country’s standard of living. Accurate inflation forecasts help policymakers design effective monetary policies and plan for sustainable economic growth.  
+        </p>
+        <p class="card-text mb-3">
+          In this project, I forecasted Canadian Inflation by collecting extensive economic data from reliable sources such as Statistics Canada and the Federal Reserve Economic Data (FRED). I proposed a novel Data-driven Weighted Forecast Combination approach that integrates machine learning algorithms and traditional time-series models to improve forecast accuracy significantly.  
+        </p>
+        <p class="card-text mb-3">
+          This innovative forecasting method provides more precise inflation predictions, enabling policymakers to prepare better for economic challenges. The approach helps simulate various economic scenarios, making it a valuable tool for macroeconomic planning and risk assessment.  
+        </p>
+        <p class="card-text mb-3">
+  <strong><span style="color: #77f5f1;">Skills Used:</span></strong> R, ML, DL, Supervised Learning, Neural Network, ARIMA, Dynamic Regression, Random Forest, XGBoost, Statistical Analysis, Data Analysis, Data Visualization, Time Series Analysis, Forecasting
+</p>
+
+        <span class="btn btn-custom me-2">Thesis Paper</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+        <!-- Project 2 -->
+        <div class="col-md-4">
+  <a href="https://medium.com/@admane.ankita/kidscibot-an-intelligent-science-tutor-for-kids-327a73a81159" class="text-decoration-none text-dark">
+    <div class="card h-100 border-0 shadow-sm">
+      <img src="images/projects/Kidscibot.png" class="card-img-top rounded-top" alt="KidSciBot Project">
+      <div class="card-body">
+        <h4 class="card-title fw-bold project-title mb-3">
+          <span style="color: #77f5f1; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">
+            🚀 KidSciBot — An Intelligent Science Tutor for Kids 📚🧒🔬
+          </span>
+        </h4>
+
+        <p class="card-text mb-3">
+          KidSciBot is an AI-powered science tutor designed to answer children’s curious questions about the universe, animals, planets, and experiments in simple, easy-to-understand language. It combines multiple sources of scientific knowledge—including PDF textbooks, real-time web search, and an advanced language model—to deliver accurate and age-appropriate answers.
+        </p>
+        <p class="card-text mb-3">
+          This project uses LangGraph to create a smart agent workflow that routes questions to the best knowledge source, ensuring relevant and concise explanations tailored for young learners. With the integration of Groq’s ultra-fast DeepSeek LLM and Retriever-Augmented Generation (RAG), KidSciBot provides engaging and trustworthy science tutoring in real time.
+        </p>
+        <p class="card-text mb-3">
+          By leveraging cutting-edge AI and retrieval techniques, KidSciBot makes learning science fun, interactive, and accessible for kids, fostering curiosity and knowledge growth.
+        </p>
+        <p class="card-text mb-3">
+          <strong><span style="color: #77f5f1;">Skills Used:</span></strong> Python, LangGraph, Groq + DeepSeek LLM, RAG, Tavily Web Search, Chroma Vector Store, HuggingFace Embeddings, AI Workflow Design
+        </p>
+
+        <span class="btn btn-custom me-2">Project Details</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+    
+        <!-- Project 3 -->
+  <div class="col-md-4">
+    <a href="https://github.com/Ankita-Codee/End-to-End-Virtual-Research-Assistant" class="text-decoration-none text-dark">
+      <div class="card h-100 border-0 shadow-sm">
+        <img src="images/projects/RA.jpeg" class="card-img-top rounded-top" alt="Virtual Research Assistant Project">
+        <div class="card-body">
+          <h4 class="card-title fw-bold project-title mb-3">
+            <span style="color: #77f5f1; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">
+              🤖 Virtual Research Assistant — Intelligent Paper Summarizer 📄
+            </span>
+          </h4>
+
+          <p class="card-text mb-3">
+            Academic research is often time-consuming, with scholars spending hours analyzing and summarizing dense scientific papers. This project introduces an intelligent assistant that streamlines this process using advanced language models and retrieval techniques.
+          </p>
+          <p class="card-text mb-3">
+           I developed a Virtual Research Assistant capable of summarizing academic papers, extracting key contributions, and identifying strengths and weaknesses. The assistant integrates APIs like ArXiv and Google Scholar to fetch research papers, and leverages Autogen for managing multi-step LLM interactions and intelligent reasoning. 
+          <p class="card-text mb-3">
+            The app is fully deployed on Streamlit, offering a clean and interactive interface for researchers and students. This tool enhances literature review workflows for students and researchers by automating information extraction, enabling faster insights, and ensuring higher quality understanding of technical documents.
+          </p>
+           <p class="card-text mb-3">
+          <strong><span style="color: #77f5f1;">Skills Used:</span></strong> Python, Streamlit, LangChain, LangGraph, Autogen, Groq + DeepSeek, RAG, ArXiv API, Google Scholar API
+         </p>
+
+
+          <span class="btn btn-custom me-2">Project Details</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  </section>
+
+  <!-- ✅ EXPERIENCE SECTION with Vertical Timeline -->
+<section id="experience" class="py-5" >
+  <div class="container">
+    <h2 class="display-4 fw-bold mb-5 text-center">
+      <span style="color: #77f5f1;">Work Experience</span>
+    </h2>
+
+    <div class="timeline position-relative">
+
+      <!-- Vertical Line -->
+      <div class="position-absolute top-0 start-50 translate-middle-x bg-secondary" style="width: 4px; height: 100%;"></div>
+
+      <!-- Timeline Item 1 -->
+      <div class="row mb-5">
+  <div class="col-md-6 text-end">
+    <h5 class="fw-bold" style="color:#77f5f1;">Artificial Intelligence Research Assistant I</h5>
+    <p class="text-muted mb-1"><span style="color: #77f5f1;">Thompson Rivers University, Canada</span></p>
+    <p>
+      <ul class="text-end" style="list-style-position: inside;">
+        <li>Developed a GenAI-based RAG system using large language models to provide real-time public sector insights.</li>
+        <li>Evaluated system outputs to ensure alignment with economic policy decisions and improved decision-making processes.</li>
+      </ul>
+      <strong>Skills:</strong> Python, NLP, LLMs, LangGraph, RAG, Prompt Engineering
+    </p>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+
+
+      <!-- Timeline Item 2 -->
+      <div class="row mb-5">
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <h5 class="fw-bold" style="color:#77f5f1;">Data Analyst / Graduate Research Assistant</h5>
+    <p class="text-muted mb-1"><span style="color: #77f5f1;">Thompson Rivers University, Canada</span></p>
+    <p>
+      <ul>
+        <li>Conducted extensive research on a critical economic topic, overcoming significant challenges in collecting and preparing complex data sets.</li>
+        <li>Experimented with various forecasting models and developed a novel approach that improved inflation prediction accuracy by 29%.</li>
+      </ul>
+      <strong>Skills:</strong> Time-series, ML, R, Statistics, Model Evaluation
+    </p>
+  </div>
+</div>
+
+      <!-- Timeline Item 3 -->
+      <div class="row mb-5">
+  <div class="col-md-6 text-end">
+    <h5 class="fw-bold" style="color:#77f5f1;">Machine Learning Teaching Assistant</h5>
+    <p class="text-muted mb-1">
+      <span style="color: #77f5f1;">Thompson Rivers University, Canada</span>
+    </p>
+    <ul class="text-end" style="list-style-position: inside;">
+      <li>Guided 30+ students through ML and DL topics, simplifying complex algorithms into digestible formats.</li>
+      <li>Supervised exams, led labs, and evaluated assignments for 100+ students, ensuring consistent academic performance and understanding.</li>
+    </ul>
+    <p class="text-end">
+      <strong>Skills:</strong> Communication, Unsupervised and Supervised ML Algorithms, Teaching, Mentoring, Leadership
+
+  </div>
+  <div class="col-md-6"></div>
+</div>
+
+
+      <!-- Timeline Item 4 -->
+      <div class="row mb-5">
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <h5 class="fw-bold" style="color:#77f5f1;">NLP Intern Developer</h5>
+    <p class="text-muted mb-1"><span style="color: #77f5f1;">Roughnext REI (OPC) Private Limited, India</span></p>
+    <p>
+      <ul style="list-style-position: inside;">
+        <li>Built sentiment classification models using Naive Bayes and Random Forest, improving accuracy through advanced preprocessing and feature engineering.</li>
+        <li>Compared model performance and selected the best algorithm based on evaluation metrics.</li>
+      </ul>
+      <strong>Skills:</strong> Python, NLP, Scikit-learn, Naive Bayes, Random Forest, Sentiment Analysis, Data Preprocessing, Model Evaluation
+
+  </div>
+</div>
+
+      <!-- Timeline Item 5 -->
+       <div class="row mb-5">
+  <div class="col-md-6 text-end">
+    <h5 class="fw-bold" style="color:#77f5f1;">Jr. Python developer</h5>
+    <p class="text-muted mb-1">
+      <span style="color: #77f5f1;">Maxgen technologies Pvt. Ltd.</span>
+    </p>
+    <ul class="text-end" style="list-style-position: inside;">
+        <li>Designed and implemented a student record management system that improved data handling efficiency by 40%.</li>
+        <li>Wrote clean, modular Python code to support automation workflows, model training, and data handling tasks.</li>
+      </ul>
+      <strong>Skills:</strong> Python, Object-Oriented Programming (OOP), Debugging & Testing, Flask, ML, NumPy, Pandas, Scikit-Learn, Matplotlib
+  </div>
+  <div class="col-md-6"></div>
+</div>
+
+
+      <!-- Timeline Item 6 -->
+      <div class="row mb-5">
+  <div class="col-md-6"></div>
+  <div class="col-md-6">
+    <h5 class="fw-bold" style="color:#77f5f1;">Systems Engineer</h5>
+    <p class="text-muted mb-1"><span style="color: #77f5f1;">Tata Consultancy Services, India</span></p>
+    <ul style="list-style-position: inside;">
+      <li>Designed dynamic financial visualization reports using SQL, Excel, and Power BI for a top banking client, enabling informed decision-making and streamlined monthly reviews.</li>
+      <li>Analyzed pension data for over 2 million clients, improving issue resolution efficiency by 35% through automated monitoring and data-driven insights.</li>
+    </ul>
+    <p>
+      <strong>Skills:</strong> SQL, Excel, Power BI, Financial Reporting, Data Analysis, Automation, Client Communication
+    </p>
+  </div>
+</div>
+
+</section>
+
+<!-- ✅ VOLUNTEERING SECTION -->
+<section id="volunteering" class="py-5" style="background-color: #1c1c1c; color: white;">
+  <div class="container">
+    <h2 class="display-4 fw-bold mb-5 text-center">
+      <span style="color: #77f5f1;">Volunteering</span>
+    </h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Volunteer 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 shadow-sm h-100" style="font-family: 'Poppins', sans-serif;">
+          <img src="images/volunteer/TRU_Conference.jpeg" class="card-img-top volunteer-img" alt="Conference Assistant Volunteer">
+          <div class="card-body">
+            <h4 class="card-title fw-bold project-title mb-3">
+              <span style="color: #77f5f1; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">
+                Volunteer -- TRU Conference in Statistics and Data Science 2023
+              </span>
+            </h4>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Provided professional hospitality by welcoming academic faculty and attendees, ensuring a positive and organized event atmosphere.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Coordinated logistical support, including managing catering services and facilitating seamless presentation setups to enhance event flow.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Captured high-quality photographic documentation of key sessions and participant interactions for promotional and archival purposes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volunteer 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 shadow-sm h-100" style="font-family: 'Poppins', sans-serif;">
+          <img src="images/volunteer/dsclub.jpeg" class="card-img-top volunteer-img" alt="Event Facilitator">
+          <div class="card-body">
+            <h4 class="card-title fw-bold project-title mb-3">
+              <span style="color: #77f5f1; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">
+                Event Facilitator – TRUSU Data Science Club
+              </span>
+            </h4>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Guided and supported students during Data Science events and workshops, ensuring smooth participation and engagement.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Assisted with logistics, setup, and coordination to ensure seamless execution.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Captured high-quality photos documenting key moments for club promotion.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Fostered a collaborative and inclusive environment for networking and knowledge sharing.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volunteer 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 shadow-sm h-100" style="font-family: 'Poppins', sans-serif;">
+          <img src="images/volunteer/NVIDIA.jpeg" class="card-img-top volunteer-img" alt="NVIDIA Deep Learning Workshop">
+          <div class="card-body">
+            <h4 class="card-title fw-bold project-title mb-3">
+              <span style="color: #77f5f1; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">
+                Volunteer – NVIDIA Deep Learning Workshop
+              </span>
+            </h4>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Acted as the official event photographer, capturing high-quality moments and technical demos for promotional use.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Engaged with AI practitioners and learners, contributing to vibrant technical discussions and collaborative learning.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Participated in applied neural network sessions to strengthen knowledge of computer vision and model training.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volunteer 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-dark text-white border-0 shadow-sm h-100" style="font-family: 'Poppins', sans-serif;">
+          <img src="images/volunteer/TRU_Sustainibility.jpg" class="card-img-top volunteer-img" alt="TRU Sustainability Volunteer">
+          <div class="card-body">
+            <h4 class="card-title fw-bold project-title mb-3">
+              <span style="color: #77f5f1; font-size: 1.25rem; font-family: 'Poppins', sans-serif;">
+                Volunteer – TRU Sustainability
+              </span>
+            </h4>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Participated in a tree mulching activity to support TRU's green campus initiative.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Contributed to environmental awareness through hands-on sustainability work. 
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Collaborated with student volunteers to promote eco-friendly practices on campus.
+            </p>
+            <p class="card-text" style="font-family: 'Poppins', sans-serif;">
+              <span style="color: #77f5f1;">&#10003;</span> Motivated by a deep appreciation for nature and a personal commitment to environmental care.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ AWARDS & SCHOLARSHIPS SECTION -->
+<section id="awards" class="py-5" style="background-color: #1c1c1c; color: white;">
+  <div class="container">
+    <h2 class="display-4 fw-bold mb-5 text-center" > <span style="color: #77f5f1;">Awards & Scholarships</span></h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Award 1 -->
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm bg-dark text-white" style="border: 3px solid #77f5f1;">
+    <a data-bs-toggle="modal" data-bs-target="#awardModal1" style="cursor: zoom-in;">
+      <img src="images/awards/Ankita_CSSC_Award.jpeg" class="card-img-top rounded-top project-img" alt="Poster Award Certificate">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <span style="color: #77f5f1;">Poster Presentation Award</span>
+      </h5>
+      <p class="card-text">
+        <span style="color: #77f5f1;">&#10003;</span> Presented innovative Canadian Inflation forecasting research at the Canadian Statistics Student Conference, earning recognition for analytical excellence.<br>
+        <span style="color: #77f5f1;">&#10003;</span> See the <a href="https://ssc.ca/en/meetings/annual/2024-ssc-annual-meeting-st-johns/twelfth-annual-canadian-statistics-student" target="_blank" class="custom-link">Event Link</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal for Award Image -->
+<div class="modal fade" id="awardModal1" tabindex="-1" aria-labelledby="awardModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark border-0 position-relative">
+
+      <!-- Close cross -->
+      <span
+        role="button"
+        aria-label="Close"
+        data-bs-dismiss="modal"
+        style="
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: red;
+          cursor: pointer;
+          user-select: none;
+          z-index: 1055;
+          text-shadow: 0 0 3px rgba(0,0,0,0.7);
+        "
+      >&times;</span>
+
+      <div class="modal-body p-0">
+        <img src="images/awards/Ankita_CSSC_Award.jpeg" class="img-fluid rounded" alt="Poster Award Enlarged">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Award 2 -->
+      <div class="col-md-4">
+  <div class="card h-100 shadow-sm bg-dark text-white" style="border: 3px solid #77f5f1;">
+    <img src="images/awards/TRU.png" class="card-img-top rounded-top project-img" alt="TRU Campus">
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <span style="color: #77f5f1;">Research Accelerate Grant</span>
+      </h5>
+      <p class="card-text">
+        <span style="color: #77f5f1;">&#10003;</span> Awarded by Thompson Rivers University for my research on inflation forecasting.
+</p>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Award 3 -->
+      <div class="col-md-4">
+  <div class="card h-100 shadow-sm bg-dark text-white" style="border: 3px solid #77f5f1;">
+    <img src="images/awards/TRU1.png" class="card-img-top rounded-top project-img" alt="TRU Campus">
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <span style="color: #77f5f1;">Internal Research Fund</span>
+      </h5>
+      <p class="card-text">
+        <span style="color: #77f5f1;">&#10003;</span> Received funding for research on Canadian Inflation Analysis using advanced methodologies.
+      </p>
+    </div>
+  </div>
+</div>  
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ ARTICLES SECTION -->
+<section id="articles" class="py-5" style="background-color: #1c1c1c; color: white;">
+  <div class="container">
+    <h2 class="display-4 fw-bold mb-5 text-center"><span style="color: #77f5f1;">Articles</span></h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Article 1 -->
+   <div class="col-md-3">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white position-relative" 
+       style="cursor: pointer;" 
+       onclick="window.location='https://medium.com/@admane.ankita/meet-ana-your-smart-friendly-chatbot-built-with-langgraph-b1927a0489ae'">
+       
+    <div class="image-overlay-container">
+      <img src="images/Medium/Ana.webp" class="card-img-top rounded-top article-img" alt="LangGraph Tutorial">
+      <div class="overlay-text">Hi! I am Ana.</div>
+    </div>
+    
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <span style="color: #77f5f1;">🤖 Meet Ana: Your Smart, Friendly Chatbot Built with LangGraph</span>
+      </h5>
+      <p class="card-text">
+       Ana is a memory-enabled, multilingual chatbot built using LangGraph, LangChain, and OpenAI. This tutorial walks you through creating Ana with memory, personality, streaming, and multilingual support -all in under 100 lines of Python.
+      </p>
+      <a href="https://medium.com/@admane.ankita/meet-ana-your-smart-friendly-chatbot-built-with-langgraph-b1927a0489ae" 
+         class="btn btn-custom me-2" 
+         onclick="event.stopPropagation();">
+         Read article
+      </a>
+    </div>
+    
+  </div>
+</div>
+
+      <!-- Article 2 -->
+    <div class="col-md-3">
+  <a href="https://medium.com/@admane.ankita/from-rag-to-agentic-rag-building-smarter-retrieval-augmented-systems-f89a6a679d4e" 
+     class="text-decoration-none text-reset">
+    <div class="card h-100 border-0 shadow-sm bg-dark text-white" style="cursor: pointer;">
+      
+      <!-- ✅ Only this container should be relative -->
+      <div class="image-overlay-container position-relative">
+        <img src="images/Medium/RAG.png" class="card-img-top rounded-top article-img" alt="Agentic RAG Tutorial">
+        <div class="overlay-text1">Let's explore RAG!!</div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">
+          <span style="color: #77f5f1;">From RAG to Agentic RAG: Building Smarter Retrieval-Augmented Systems</span>
+        </h5>
+        <p>
+          Learn how Agentic RAG enhances traditional RAG by adding decision-making, turning retrieval-augmented generation into a goal-driven, context-aware reasoning agent using LangChain and LangGraph.
+
+        </p>
+
+        <a href="https://medium.com/@admane.ankita/from-rag-to-agentic-rag-building-smarter-retrieval-augmented-systems-f89a6a679d4e" 
+           class="btn btn-custom me-2" onclick="event.stopPropagation();">Read article</a>
+      </div>
+
+    </div>
+  </a>
+</div>
+
+
+
+      <!-- Article 3 -->
+     <div class="col-md-3">
+  <div class="card h-100 border-0 shadow-sm bg-dark text-white" style="cursor: pointer;" onclick="window.location='https://medium.com/@admane.ankita/langchain-explained-crafting-sequential-ai-pipelines-with-structured-outputs-628cf1f1d5f0'">
+    
+    <!-- 🖼 Image with Overlay -->
+    <div class="image-overlay-container">
+      <img src="images/Medium/langchain.png" class="card-img-top rounded-top article-img" alt="Langchain Tutorial">
+      <div class="overlay-text">Get Product Price and Details here!</div>
+    </div>
+    
+    <!-- 📄 Card Body -->
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <span style="color: #77f5f1;">LangChain Explained: Crafting Sequential AI Pipelines with Structured Outputs</span>
+      </h5>
+      <p class="card-text">Let’s build a simple AI assistant that, when asked about a product, returns a structured JSON response with the product name, description, and price.
+
+      </p>
+      <a href="https://medium.com/@admane.ankita/langchain-explained-crafting-sequential-ai-pipelines-with-structured-outputs-628cf1f1d5f0" class="btn btn-custom me-2" onclick="event.stopPropagation();">Read article</a>
+    </div>
+  </div>
+</div>
+
+
+
+     <!-- Article 4 -->
+ <div class="col-md-3">
+  <a href="https://medium.com/@admane.ankita/understanding-python-classes-dataclasses-and-pydantic-when-and-why-to-use-each-09381246b81f" 
+     class="text-decoration-none text-reset">
+    <div class="card h-100 border-0 shadow-sm bg-dark text-white" style="cursor: pointer;">
+      
+      <!-- ✅ Only this container should be relative -->
+      <div class="image-overlay-container position-relative">
+        <img src="images/Medium/pydantic.jpg" class="card-img-top rounded-top article-img" alt="Pydantic Tutorial">
+        <div class="overlay-text1">Want to know Pydantic 🐍</div>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">
+          <span style="color: #77f5f1;">Understanding Python Classes, Dataclasses, and Pydantic: When and Why to Use Each 💻🐍</span>
+        </h5>
+        <p>
+         Python provides multiple ways to structure and validate your data, each suited for different use cases and levels of complexity. Whether you are building a simple data container or a robust API backend, choosing the right tool can save time, reduce bugs, and improve code clarity.
+
+        </p>
+
+        <a href="https://medium.com/@admane.ankita/understanding-python-classes-dataclasses-and-pydantic-when-and-why-to-use-each-09381246b81f" 
+           class="btn btn-custom me-2" onclick="event.stopPropagation();">Read article</a>
+      </div>
+
+    </div>
+  </a>
+</div>
+
+
+
+  <!-- ✅ CERTIFICATES SECTION -->
+<section id="certificates" class="py-5 text-center" style="background-color: #1c1c1c; color: white;">
+  <div class="container">
+    <h2 class="display-5 fw-bold mb-5" ><span style="color: #77f5f1;">Certificates</span></h2>
+    <div class="row g-4 justify-content-center">
+
+     <!-- Certificate 1 -->
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm border-0 bg-dark text-white">
+    <a data-bs-toggle="modal" data-bs-target="#certificateModal1">
+      <img src="images/certificates/Python.png" class="card-img-top w-75 mx-auto mt-3 rounded" alt="GenAI Certificate" style="cursor: zoom-in;">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <span style="color: #77f5f1;">Python For Data Science</span>
+      </h5>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="certificateModal1" tabindex="-1" aria-labelledby="certificateModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark border-0 position-relative">
+
+      <!-- Close cross -->
+      <span
+        role="button"
+        aria-label="Close"
+        data-bs-dismiss="modal"
+        style="
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: red;
+          cursor: pointer;
+          user-select: none;
+          z-index: 1055;
+          text-shadow: 0 0 3px rgba(0,0,0,0.7);
+        "
+      >&times;</span>
+
+      <div class="modal-body p-0">
+        <img src="images/certificates/Python.png" class="img-fluid rounded" alt="Enlarged Certificate">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Certificate 2 -->
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm border-0 bg-dark text-white">
+    <a data-bs-toggle="modal" data-bs-target="#certificateModal2">
+      <img src="images/certificates/SQL.png" class="card-img-top w-75 mx-auto mt-3 rounded" alt="SQL Certificate" style="cursor: zoom-in;">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <span style="color: #77f5f1;">Intermediate SQL for Data Science</span>
+      </h5>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="certificateModal2" tabindex="-1" aria-labelledby="certificateModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark border-0 position-relative">
+
+      <!-- Close cross -->
+      <span
+        role="button"
+        aria-label="Close"
+        data-bs-dismiss="modal"
+        style="
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: red;
+          cursor: pointer;
+          user-select: none;
+          z-index: 1055;
+          text-shadow: 0 0 3px rgba(0,0,0,0.7);
+        "
+      >&times;</span>
+
+      <div class="modal-body p-0">
+        <img src="images/certificates/SQL.png" class="img-fluid rounded" alt="SQL Certificate Enlarged">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Certificate 3 -->
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm border-0 bg-dark text-white">
+    <a data-bs-toggle="modal" data-bs-target="#certificateModal3">
+      <img src="images/certificates/NVIDIA.png" class="card-img-top w-75 mx-auto mt-3 rounded" alt="Deep Learning Certificate" style="cursor: zoom-in;">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title fw-bold">
+        <span style="color: #77f5f1;">Fundamentals of Deep Learning</span>
+      </h5>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="certificateModal3" tabindex="-1" aria-labelledby="certificateModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark border-0 position-relative">
+
+      <!-- Close cross -->
+      <span
+        role="button"
+        aria-label="Close"
+        data-bs-dismiss="modal"
+        style="
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: red;
+          cursor: pointer;
+          user-select: none;
+          z-index: 1055;
+          text-shadow: 0 0 3px rgba(0,0,0,0.7);
+        "
+      >&times;</span>
+
+      <div class="modal-body p-0">
+        <img src="images/certificates/NVIDIA.png" class="img-fluid rounded" alt="Deep Learning Certificate Enlarged">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ CONTACT SECTION -->
+<section id="contact" class="py-5 text-white" style="background-color: #1c1c1c;">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold mb-5"><span style="color: #77f5f1;">Find Me On</span></h2>
+
+    <!-- ✅ Social Media Icons -->
+    <div class="d-flex justify-content-center flex-wrap gap-4">
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/ankita-shelke-bb515221b/" target="_blank" data-bs-toggle="tooltip" title="LinkedIn">
+        <div class="rounded-circle bg-white d-flex align-items-center justify-content-center shadow" style="width: 70px; height: 70px;">
+          <img src="icons/linkedin.png" alt="LinkedIn" width="52">
+        </div>
+      </a>
+
+      <!-- Medium -->
+      <a href="https://medium.com/@admane.ankita" target="_blank" data-bs-toggle="tooltip" title="Medium">
+        <div class="rounded-circle bg-white d-flex align-items-center justify-content-center shadow" style="width: 70px; height: 70px;">
+          <img src="icons/m.png" alt="Medium" width="40">
+        </div>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/Ankita-Codee" target="_blank" data-bs-toggle="tooltip" title="GitHub">
+        <div class="rounded-circle bg-white d-flex align-items-center justify-content-center shadow" style="width: 70px; height: 70px;">
+          <img src="icons/github.png" alt="GitHub" width="47">
+        </div>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/admane_1?igsh=Nnl2cTZvZW80ZWpq&utm_source=qr" target="_blank" data-bs-toggle="tooltip" title="Instagram">
+        <div class="rounded-circle bg-white d-flex align-items-center justify-content-center shadow" style="width: 70px; height: 70px;">
+          <img src="icons/instagram.png" alt="Instagram" width="46">
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:admane.ankita@gmail.com" data-bs-toggle="tooltip" title="Email">
+  <div class="rounded-circle bg-white d-flex align-items-center justify-content-center shadow" style="width: 70px; height: 70px;">
+    <img src="icons/email.png" alt="Email" width="47">
+  </div>
+</a>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ✅ BOOTSTRAP + TYPED.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed('#typed-text', {
+      strings: ["Data Scientist", "Data Analyst","AI/ML Engineer", "Research Assistant", "Systems Engineer"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1500,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>
